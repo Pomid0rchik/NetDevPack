@@ -33,6 +33,14 @@ namespace NetDevPack.Specification
             return new OrSpecification<T>(this, specification);
         }
 
+        public Specification<T> Xor(Specification<T> specification)
+        {
+            if (this == All ^ specification == All)
+                return All;
+
+            return new XorSpecification<T>(this, specification);
+        }
+
         public Specification<T> Not()
         {
             return new NotSpecification<T>(this);

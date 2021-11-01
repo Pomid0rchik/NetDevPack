@@ -28,6 +28,6 @@ namespace NetDevPack.Perf.Tests
         }
 
         [Benchmark]
-        public string NetDevPackUrlize() => " Tipo de dado gerado pela configuração HasColumnType<string> ".Urlize();
+        public string NetDevPackUrlize() => Title.Urlize();
     }
 }
